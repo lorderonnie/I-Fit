@@ -19,15 +19,13 @@ from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
-from project import views as user_views
+from fitness import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('project.urls')),
+    path('', include('fitness.urls')),
+    url(r'^accounts/',include('registration.backends.simple.urls')),
     path('accounts/profile/',user_views.profile,name='profile'),
 
 
 ]
-if settings.DEBUG:
-        urlpatterns += static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

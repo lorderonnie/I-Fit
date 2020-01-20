@@ -7,8 +7,6 @@ class Profile(models.Model):
     user  = models.OneToOneField(User, on_delete = models.CASCADE, default='')
     profile_pic = models.ImageField(upload_to = 'media/', default='default.jpg')
     bio = models.TextField()
-    email = models.EmailField(_('email address'), unique=True)
-    date_joined = models.DateTimeField(default=timezone.now)
     updated_on = models.DateTimeField(auto_now_add=True)
     goal1 = models.CharField(max_length=50)
     goal2 = models.CharField(max_length=50)

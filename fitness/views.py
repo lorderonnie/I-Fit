@@ -33,4 +33,12 @@ def updateprofile(request):
         form = UpdateProfileForm(instance=request.user.profile)
         form1 = UserUpdateform(instance=request.user)
     return render(request,"start/updateprofile.html",{"form":form,"form1":form1})
-   
+
+@login_required(login_url="/accounts/login/")
+def logout(request):
+  logout(request)
+  return redirect('home')
+
+
+
+
