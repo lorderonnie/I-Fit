@@ -1,0 +1,339 @@
+.nav__cont {
+    position: fixed;
+    width: 40px;
+    top:0;
+    height: 100vh;
+    z-index: 100;
+    background-color: #202020;
+    overflow:hidden;
+    transition:width .3s ease;
+    cursor:pointer;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+}
+.nav__cont:hover {
+      width:150px;
+    }
+
+  
+  
+  .nav {
+    list-style-type: none;
+    color:white;
+  }
+  .nav :first-child {
+      padding-top:1.5rem;
+    }
+
+  
+  .nav__items {
+    padding-bottom:4rem;
+    font-family: 'roboto';
+  }
+    .nav__items a {
+      position: relative;
+      display:block;
+      top:-35px;
+      padding-left:25px;
+      padding-right:15px;
+      transition:all .3s ease;
+      margin-left:25px;
+      margin-right:10px;
+      text-decoration: none;
+      color:white;
+      font-family: 'roboto';
+      font-weight: 100;
+      font-size: 1.35em;
+    }
+      .nav__items a:after {
+         content:'';
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top:0;
+         left:0;
+         border-radius:2px;
+         background:radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
+         opacity:0;
+         transition:all .5s ease;
+         z-index: -10;
+       
+    }
+    .nav__items:hover a:after {
+      opacity:1;
+    }
+     svg{
+      width:20px;
+      height:26px;
+      position: relative;
+      left:-25px;
+      cursor:pointer;
+      @media screen and(min-width:600px) {
+        width:30px;
+      height:32px;
+  left:-15px;
+      }
+    }
+
+
+
+
+/* footer css */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+
+section{
+  text-align:center;
+}
+.footer #button{
+	width:35px;
+	height:35px;
+	border: #1A334B 12px solid;
+	border-radius:35px;
+	margin:0 auto;
+	position:relative;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.footer #button:hover{
+	width:35px;
+	height:35px;
+	border: transparent 12px solid;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+.footer {
+	bottom:0;
+	left:0;
+	position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index:999;
+}
+.footer:hover {
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	height: 10em;
+}
+.footer #container{
+	margin-top:5px;
+	width:100%;
+height:100%;
+  position:relative;
+  top:0;
+  left:0;
+	background: transparent;
+}
+.footer #cont{
+  position:relative;
+  top:-45px;
+  right:190px;
+	width:150px;
+	height:auto;
+	margin:0 auto;
+}
+.footer_center{
+	width:500px;
+	float:left;
+  text-align:center;
+}
+.footer h3{
+	font-family: 'Helvetica';
+	font-size: 30px;
+	font-weight: 100;
+	margin-top:70px;
+	margin-left:40px;
+}
+ 
+  
+
+  
+  
+@media screen and (min-width: 600px) {
+
+}
+
+
+
+/* footer info css */
+
+
+#row ul {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(0%, 90%);
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+#row ul li {
+  list-style: none;
+}
+
+#row ul li a {
+  position: relative;
+  width:60px;
+  height:60px;
+  display:block;
+  text-align:center;
+  margin:0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration:none;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: .5s;
+}
+
+#row ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#row ul li a .fa {
+  width: 100%;
+  height:100%;
+  display:block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size:24px;
+  color: #262626;
+  transition: .5s;
+}
+
+#row ul li:nth-child(1) a:hover .fa {
+  color: #3b5998;
+}
+
+#row ul li:nth-child(2) a:hover .fa {
+  color: #00aced;
+}
+
+#row ul li:nth-child(3) a:hover .fa {
+  color: #dd4b39;
+}
+
+#row ul li:nth-child(4) a:hover .fa {
+  color: #007bb6;
+}
+
+#row ul li:nth-child(5) a:hover .fa {
+  color: #e4405f;
+}
+
+
+/* for login button in home page */
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+* {
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+  span {
+    transform: skewX(15deg) 
+  }
+
+  span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+/**************SVG****************/
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+
