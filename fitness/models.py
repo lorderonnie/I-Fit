@@ -13,8 +13,7 @@ class Profile(models.Model):
     goal3 = models.CharField(max_length=50)
     goal4 = models.CharField(max_length=50)
     goal5 = models.CharField(max_length=50)
-    def __str__(self):
-        return user
+    
     
     def save_profile(self):
         
