@@ -13,11 +13,19 @@ def home(request):
 
 
 @login_required(login_url = '/accounts/login/')
+def workout(request):
+    return render(request,'exercise/workout.html')
+@login_required(login_url = '/accounts/login/')
+def healthfacts(request):
+    return render(request,'exercise/healthfact.html')
+
+
+@login_required(login_url = '/accounts/login/')
 def profile(request):
     name = request.user
     profile = Profile.get_profile_by_name(name)
 
-    return render(request,"start/profile.html",{"profile":profile,"name":name})
+    return render(request,"profile/profile.html",{"profile":profile,"name":name})
 
 @login_required(login_url = '/accounts/login/')   
 def updateprofile(request):
@@ -32,7 +40,7 @@ def updateprofile(request):
     else:
         form = UpdateProfileForm(instance=request.user.profile)
         form1 = UserUpdateform(instance=request.user)
-    return render(request,"start/updateprofile.html",{"form":form,"form1":form1})
+    return render(request,"profile/updateprofile.html",{"form":form,"form1":form1})
 
 @login_required(login_url="/accounts/login/")
 def logout(request):
