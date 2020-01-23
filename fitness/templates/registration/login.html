@@ -2,21 +2,29 @@
 {% load bootstrap4%}
 {% block content %}
 <style>
-
+body{
+    background-image:url(https://www.xmple.com/wallpaper/blue-purple-gradient-linear-1920x1080-c2-00008b-9370db-a-210-f-14.svg);
+    font-family: 'Kalam', cursive;
+}
 </style>
 
 <body>
-<div class="container" width="700px"height="700px">
+<div style="margin-left:530px;margin-top:0px;" >
+<img src="https://us.123rf.com/450wm/vectorv/vectorv1905/vectorv190509621/123663921-turquoise-dumbbell-line-icon-isolated-on-blue-background-muscle-lifting-icon-fitness-barbell-gym-ico.jpg?ver=6" width="250px" height="250px" style="border-radius:50%;">
+</div><br>
+<h1 style="text-align:center;">WELCOME TO I-FIT</h1>   
+<div class="container" width="700px"height="700px" style="margin-top:50px;">
     <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="background-color:transparent;">
         {% if form.errors %}
             <p> Password or Username is incorrect </p>
         {% endif %}
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                    <h3 class="text-center">Sign In</h3>
+                
+                    <h3 class="text-center">Login</h3>
                 </div>
                 <div class="panel-body">
                     <form action="/accounts/login/"method="post">
@@ -24,14 +32,14 @@
                         {% bootstrap_form form %}
 
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm" value="Login">
+                            <input type="submit" class="btn btn-outline-secondary btn-sm" value="Login">
 
                         </div>
 
                         <input type="hidden" name="next" value="{{next}}">
                     </form>
-                    <a href="/accounts/register/"> <button> Sign Up</button> </a>
-
+                    <a href="/accounts/register/"> <button class="btn btn-outline-success"> Sign Up</button> </a>
+                    <hr>
                 </div>
             </div>
         </div>
