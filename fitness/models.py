@@ -5,7 +5,7 @@ import datetime
 
 class Profile(models.Model):
     user  = models.OneToOneField(User, on_delete = models.CASCADE, default='')
-    profile_pic = models.ImageField(upload_to = 'media/', default='default.jpg')
+    profile_pic = models.ImageField(upload_to = 'media/', default='default.jpg',blank=True)
     bio = models.TextField()
     updated_on = models.DateTimeField(auto_now_add=True)
     goal1 = models.CharField(max_length=50)
@@ -27,3 +27,32 @@ class Profile(models.Model):
         return  name 
     
 
+class Workouts(models.Model):
+    user = models.ForeignKey(User,on_delete = models.CASCADE)
+    workout_name = models.CharField(max_length=50)
+    day = models.CharField(max_length=50)
+    body_section = models.CharField(max_length=60)
+    date_created =  models.DateTimeField(auto_now_add=True)
+    number_of_sets = models.IntegerField(default=0)
+    
+    def save_workout():
+        self.save()
+        
+    def delete_workout():
+        self.delete()
+        
+    @classmethod
+    def get_all_workouts(cls):
+        workouts = cls.objects.all()
+        return workouts
+        
+    @classmethod
+    def get_workout_by_workout_name(cls,name):
+        workouts = cls.objects.filter(workout_name=workout_name)
+        return workouts
+
+    
+    
+    
+    
+          
