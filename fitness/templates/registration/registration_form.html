@@ -2,27 +2,34 @@
 {% load bootstrap4%}
 {% block content %}
 <style>
-
+body{
+    background-image:url(https://www.xmple.com/wallpaper/blue-purple-gradient-linear-1920x1080-c2-00008b-9370db-a-210-f-14.svg);
+    font-family: 'Kalam', cursive;
+}
 </style>
 
 <body>
-
-<h1>SIGN-UP</h1>
+<div style="margin-left:530px;margin-top:0px;" >
+<img src="https://us.123rf.com/450wm/vectorv/vectorv1905/vectorv190509621/123663921-turquoise-dumbbell-line-icon-isolated-on-blue-background-muscle-lifting-icon-fitness-barbell-gym-ico.jpg?ver=6" width="250px" height="250px" style="border-radius:50%;">
+</div><br>
+<h1 style="text-align:center;color:#CCE1F5;">I-FIT</h1>  
+<div class="container-fluid"> 
+<h1 style="color:#CCE1F5;">SIGN-UP</h1>
 <div id="strand">
     <form method="POST" action="/accounts/register/" >
         {% csrf_token%}
         {% bootstrap_form form %}
         <input class="btn btn-primary" type="submit">
-    </form>
+    </form><br><br>
     <div>
         {% for message in messages%}
             <h3>{{message}}</h3>
         {% endfor %}
     </div>
 </div>
-
+</div>
 </body>
 
-</body>
+
 
 {% endblock %}
