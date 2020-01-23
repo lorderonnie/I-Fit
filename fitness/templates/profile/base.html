@@ -13,13 +13,14 @@
 
     {% block styles %}
         {% bootstrap_css %}
+        <link href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Kalam&display=swap" rel="stylesheet">
          <link href="https://coolors.co/" >
         <link rel="stylesheet" href="{% static 'css/fit.css'%}">
     {% endblock %}
 </head>
 
 <body>
-    {% include "exercise/navbar.html" %}
+    {% include "exercise/header.html"%}
     
     {% block content %}
     {% endblock %}
