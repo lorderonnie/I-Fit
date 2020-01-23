@@ -2,39 +2,83 @@
 {% load bootstrap4%}
 {% block content %}
 <style>
-
+#profile{
+    background-color:#AAA3B4;
+    background-image:url();
+    background-size:cover;
+}
+#style{
+    margin-top:170px;
+    margin-left:700px;
+    background-color:transparent;
+    width:500px;
+    font-family: 'Kalam', cursive;
+    color:black;
+}
+.for{
+    position:absolute;
+    top:1%;
+    left:10%;
+    font-family: 'Cinzel', serif;
+    color:black;
+}
 </style>
 
-<body>
+<body id="profile">
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+        <div class="for" style="float:left;margin-left:150px; ">
             {% if user.profile.profile_pic %}
-                <img style="background-color: transparent;border-radius:60%;" src=" {{user.profile.profile_pic.url}} " alt="dp" width="400px" height="400px">
+                <img style="background-color: transparent;border-radius:60%;" src="{{user.profile.profile_pic.url}}  " alt="dp" width="400px" height="400px">
             {% else %}
-                <img src="" alt="dp">
+                <img style="background-color: transparent;border-radius:60%;" width="400px" height="400px" src="https://img.favpng.com/0/23/12/computer-icons-user-profile-avatar-download-png-favpng-HCP2ruSy9qq256gNd6va7BTdJ.jpg" alt="dp">
             {% endif %}
-        </div>
-        <div class="col-md-6">
-           <h3>Username: {{user.username}} </h3>
+        </div><br><br><br><br>
+        <div class="for" style="float:left;margin-left:700px;margin-top:0px;">
+           <h3 style="font-size:30px;"><b>Username:</b>{{user.username}} </h3><br>
            {% if user.profile.bio %}
-             <h5><b>Bio:</b> {{user.profile.bio}}</h5>
+             <h5 style="font-size:20px;"><b>Bio:</b> {{user.profile.bio}}</h5>
            {% else %}
                 <p>You have no bio yet</p>
 
             {% endif %}
             
-            <a href="{% url 'updateprofile'%}" class="btn btn-danger"  name="Update" >Update</a>
         </div>
-    </div><br><br>
-    <div class="row">
-            <div class="col-md-2"></div>
-           
-            <div class="col-md-2"></div>
 
-    </div>
+<div  id="style">
+<h2 style=" font-size:30px;">Set your goals:</h2>
+{% if user.profile.goal1%}
+<h5 style=" font-size:20px;"><b>1:</b>{{user.profile.goal1}}</h5>
+{% else %}
+<p>you havent set a Goal yet 🙁</p><br><br>
+{% endif %}
+{% if user.profile.goal2%}
+<h5 style=" font-size:20px;"><b>2:</b>{{user.profile.goal2}}</h5>
+{% else %}
+<p>you havent set a Goal yet 🙁</p><br><br>
+{% endif %}
+{% if user.profile.goal3%}
+<h5 style=" font-size:20px;"><b>3:</b>{{user.profile.goal3}}</h5>
+{% else %}
+<p>you havent set a Goal yet 🙁</p><br><br>
+{% endif %}
+{% if user.profile.goal4%}
+<h5 style=" font-size:20px;"><b>4:</b>{{user.profile.goal4}}</h5>
+{% else %}
+<p>you havent set a Goal yet 🙁</p><br><br>
+{% endif %}
+{% if user.profile.goal5%}
+<h5 style=" font-size:20px;"><b>5:</b>{{user.profile.goal5}}</h5>
+{% else %}
+<p>you havent set a Goal yet 🙁</p><br><br>
+{% endif %}
+
+
+
+
+<a href="{% url 'updateprofile'%}" class="btn btn-danger"  name="Update" >Update</a>
 </div>
-
+</div><br><br>
+   
 </body>
 
 {% endblock %}
