@@ -2,8 +2,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
 from django import forms
-from .models import Profile
+from .models import Profile,Workouts
 
+class NewWorkPlanForm(forms.ModelForm):
+    class Meta:
+        model = Workouts
+        exclude = ['user']
+        
 class UpdateProfileForm(forms.ModelForm):
     bio = forms.Textarea()
     class Meta:
